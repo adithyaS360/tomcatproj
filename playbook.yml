@@ -6,6 +6,6 @@
 
     - name: Copy WAR file to Tomcat
       copy:
-       target/tomcat2.war
+        src: target/tomcat2.war
         dest: /opt/tomcat/webapps/tomcat2.war
         remote_src: no
