@@ -1,0 +1,12 @@
+---
+- name: Deploy to Tomcat
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: Copy WAR file to Tomcat
+      copy:
+        src: target/tomcat2.war
+        dest: /opt/tomcat/webapps/tomcat2.war
+        remote_src: no
